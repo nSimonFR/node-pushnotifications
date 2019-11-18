@@ -121,6 +121,7 @@ const sendGCM = (regIds, data, settings) => {
     collapseKey: data.collapseKey,
     priority: data.priority === 'normal' ? data.priority : 'high',
     contentAvailable: data.contentAvailable || false,
+    mutableContent: data.mutableContent || false, // iOS
     delayWhileIdle: data.delayWhileIdle || false,
     timeToLive: extractTimeToLive(data),
     restrictedPackageName: data.restrictedPackageName,
